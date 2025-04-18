@@ -4,9 +4,9 @@ import NDK, { NDKEvent, NDKPrivateKeySigner, NostrEvent } from '@nostr-dev-kit/n
 import { randomBytes } from 'crypto';
 import { NextResponse } from 'next/server';
 import { Event, getPublicKey, nip04, validateEvent, verifySignature } from 'nostr-tools';
-import { ADMIN_PRIVATE_KEY, SIGNUP_ENABLED, SIGNUP_MSATS_PRICE } from '~/lib/envs';
-import { federationConfig } from '~/lib/federation';
-import { GenerateNonceReturns, initializeNDK, validateSchema } from '~/lib/utils';
+import { ADMIN_PRIVATE_KEY, SIGNUP_ENABLED, SIGNUP_MSATS_PRICE } from '~/constants/lib/envs';
+import { federationConfig } from '~/constants/lib/federation';
+import { GenerateNonceReturns, initializeNDK, validateSchema } from '~/constants/lib/utils';
 import { prisma } from '~/server/db';
 
 async function generateNonce(event: NDKEvent, adminPubkey: string): Promise<GenerateNonceReturns> {

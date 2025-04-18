@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { generateLUD06 } from '~/lib/utils';
+import { generateLUD06 } from '~/constants/lib/utils';
 import { prisma } from '~/server/db';
 
 export async function GET(request: NextRequest, { params }: { params: { name: string } }) {

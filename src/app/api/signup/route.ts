@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { SIGNUP_ENABLED, SIGNUP_MSATS_PRICE } from '~/lib/envs';
+import { SIGNUP_ENABLED, SIGNUP_MSATS_PRICE } from '~/constants/lib/envs';
 
 export async function GET() {
   // if (SIGNUP_MSATS_PRICE < 1000) return NextResponse.json({ enabled: 0, milisatoshis: 0 }, { status: 200 });

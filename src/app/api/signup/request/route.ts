@@ -5,9 +5,9 @@ import { NextResponse } from 'next/server';
 import { getPublicKey, nip04 } from 'nostr-tools';
 
 import { LightningAddress } from '@getalby/lightning-tools';
-import { ADMIN_PRIVATE_KEY, SIGNUP_ENABLED, SIGNUP_NIP05_RECEIVER, SIGNUP_MSATS_PRICE } from '~/lib/envs';
-import { federationConfig } from '~/lib/federation';
-import { initializeNDK, signNdkEvent } from '~/lib/utils';
+import { ADMIN_PRIVATE_KEY, SIGNUP_ENABLED, SIGNUP_NIP05_RECEIVER, SIGNUP_MSATS_PRICE } from '~/constants/lib/envs';
+import { federationConfig } from '~/constants/lib/federation';
+import { initializeNDK, signNdkEvent } from '~/constants/lib/utils';
 
 export const revalidate = 0;
 

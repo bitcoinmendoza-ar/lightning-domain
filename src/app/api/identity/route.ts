@@ -1,13 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Event, validateEvent, verifySignature } from 'nostr-tools';
-import { validateSchema } from '~/lib/utils';
+import { validateSchema } from '~/constants/lib/utils';
 
-import { generateIdentityEvent, publishEvent } from '~/lib/events';
+import { generateIdentityEvent, publishEvent } from '~/constants/lib/events';
 import { prisma } from '~/server/db';
 
 import reserved from '../../../constants/reserved.json';
 import { randomBytes } from 'crypto';
-import { ADMIN_PRIVATE_KEY, AUTOCREATE_NONCE } from '~/lib/envs';
+import { ADMIN_PRIVATE_KEY, AUTOCREATE_NONCE } from '~/constants/lib/envs';
 
 async function createIdentity(request: Request) {
   const event: Event = (await request.json()) as unknown as Event;

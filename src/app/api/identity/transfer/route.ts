@@ -1,9 +1,9 @@
 import { NextResponse } from 'next/server';
 import { Event, nip26, validateEvent, verifySignature } from 'nostr-tools';
-import { validateSchema } from '~/lib/utils';
+import { validateSchema } from '~/constants/lib/utils';
 import { prisma } from '~/server/db';
 import type { Identity } from '@prisma/client';
-import { federationConfig } from '~/lib/federation';
+import { federationConfig } from '~/constants/lib/federation';
 
 export async function POST(request: Request) {
   const event: Event = (await request.json()) as unknown as Event;
